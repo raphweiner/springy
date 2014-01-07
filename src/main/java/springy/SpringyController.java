@@ -7,7 +7,6 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 public class SpringyController {
     private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/")
     public String index() {
@@ -18,7 +17,7 @@ public class SpringyController {
     public
     @ResponseBody
     Greeting greeting(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
-        return new Greeting((int) counter.incrementAndGet(), String.format(template, name));
+        return new Greeting(String.format(template, name));
     }
 
     @RequestMapping(value = "/post", method = RequestMethod.POST)
