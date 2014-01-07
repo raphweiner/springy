@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
+@RequestMapping("/api")
 public class SpringyController {
     private static final String template = "Hello, %s!";
 
