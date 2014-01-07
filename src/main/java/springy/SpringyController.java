@@ -18,7 +18,7 @@ public class SpringyController {
     public
     @ResponseBody
     Greeting greeting(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
-        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+        return new Greeting((int) counter.incrementAndGet(), String.format(template, name));
     }
 
     @RequestMapping(value = "/post", method = RequestMethod.POST)

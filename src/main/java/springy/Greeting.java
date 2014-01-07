@@ -1,15 +1,15 @@
 package springy;
 
 public class Greeting {
-    private final long id;
+    private final int id;
     private final String content;
 
-    public Greeting(long id, String content) {
+    public Greeting(int id, String content) {
         this.id = id;
         this.content = content;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
